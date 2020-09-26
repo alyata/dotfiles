@@ -1,0 +1,13 @@
+
+# >>> trueline setup >>>
+declare -a TRUELINE_SEGMENTS=(
+	'conda_env,green,cursor_grey,bold'
+	'user,black,purple,bold'
+	#'git,grey,special_grey,normal'
+	'working_dir,grey,special_grey,normal'
+	'read_only,black,orange,bold'
+	#'bg_jobs,black,orange,bold'
+	#'exit_status,black,red,bold'
+)
+source ~/.trueline
+# <<< trueline setup <<<
