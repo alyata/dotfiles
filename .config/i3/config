@@ -235,9 +235,11 @@ bindsym $mod+x mode "display"
 # =====================
 
 exec --no-startup-id "i3-msg 'workspace number 1; append_layout ~/.config/i3/workspace-1.json'"
-exec --no-startup-id "i3-msg 'workspace number 2; append_layout ~/.config/i3/workspace-2.json'"
 exec alacritty
+exec --no-startup-id "i3-msg 'workspace number 2; append_layout ~/.config/i3/workspace-2.json'"
 exec google-chrome-stable
+exec --no-startup-id "i3-msg 'workspace number 3; append_layout ~/.config/i3/workspace-3.json'"
+exec discord
 
 # OTHER STUFF
 # ======================

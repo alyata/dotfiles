@@ -1,3 +1,4 @@
+alias vim='vim --servername foo'
 
 # >>> trueline setup >>>
 declare -a TRUELINE_SEGMENTS=(
