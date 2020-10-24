@@ -15,8 +15,11 @@ set nocompatible
 " ====================
 call plug#begin('~/.vim/plugged')
 
-" Atom Onedark color
+" Atom Onedark color scheme
 Plug 'joshdick/onedark.vim'
+
+" Nord color scheme
+Plug 'arcticicestudio/nord-vim'
 
 " git diff on sidebar
 Plug 'airblade/vim-gitgutter'
@@ -56,8 +59,8 @@ Plug 'mtth/scratch.vim'
 
 call plug#end()
 
-" Onedark.vim theme setup
-" =======================
+" Theme setup
+" ===========
 "Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
 if (empty($TMUX))
   if (has("nvim"))
@@ -72,8 +75,8 @@ endif
 " Turn on syntax highlighting.
 syntax on
 
-" Apply bubblegum color theme
-colorscheme onedark
+" Apply color theme
+colorscheme nord
 
 " Quality of Life changes
 " =======================
@@ -155,7 +158,7 @@ let g:NERDTreeMinimalUI = v:true
 " Airline setup
 " =============
 " set the airline theme
-let g:airline_theme='bubblegum'
+let g:airline_theme='nord'
 " branch parts
 let g:airline_enable_branch=1
 let g:airline_powerline_fonts = 1

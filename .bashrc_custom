@@ -1,14 +1,41 @@
 alias vim='vim --servername foo'
 
-# >>> trueline setup >>>
+# Use nord colors for dircolors
+test -r ~/.nord_dircolors && eval $(dircolors ~/.nord_dircolors)
+
+# Trueline setup
+# Nord colors
+declare -A TRUELINE_COLORS=(
+    # Polar Night
+    [nord0]='46;52;64'      # default night
+    [nord1]='59;66;82'      # brighter night
+    [nord2]='67;76;94'      # even brighter
+    [nord3]='76;86;106'     # brightest night
+    # Snow Storm
+    [nord4]='216;222;233'   # default snow
+    [nord5]='229;233;240'   # brighter snow
+    [nord6]='236;239;244'   # brightest snow
+    # Frost
+    [nord7]='143;188;187'   # frozen polar water
+    [nord8]='136;192;208'   # pure & clear ice
+    [nord9]='129;161;193'   # arctic waters
+    [nord10]='94;129;172'   # deeper arctic waters
+    # Aurora
+    [nord11]='191;97;106'   # red
+    [nord12]='208;135;112'  # orange
+    [nord13]='235;203;139'  # yellow
+    [nord14]='163;190;140'  # green
+    [nord15]='180;142;173'  # purple
+)
+
 declare -a TRUELINE_SEGMENTS=(
-	'conda_env,green,cursor_grey,bold'
-	'user,black,purple,bold'
+	'conda_env,nord14,nord0,bold'
+	'user,nord0,nord8,bold'
 	#'git,grey,special_grey,normal'
-	'working_dir,grey,special_grey,normal'
-	'read_only,black,orange,bold'
+	'working_dir,nord4,nord2,normal'
+	'read_only,nord0,nord12,bold'
 	#'bg_jobs,black,orange,bold'
 	#'exit_status,black,red,bold'
 )
+
 source ~/.trueline
-# <<< trueline setup <<<
