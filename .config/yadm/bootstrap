@@ -10,3 +10,7 @@ echo "source .bashrc_custom" >> ~/.bashrc
 # install the trueline bash prompt generator
 curl -fLo ~/.trueline \
  	https://raw.githubusercontent.com/petobens/trueline/master/trueline.sh
+
+# get nord dircolors
+curl -flo ~/.nord_dircolors \
+    https://raw.githubusercontent.com/arcticicestudio/nord-dircolors/develop/src/dir_colors
