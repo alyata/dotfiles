@@ -51,6 +51,9 @@ Plug 'lervag/vimtex'
 " Autoclose brackets
 Plug 'jiangmiao/auto-pairs'
 
+" Persistent scratch buffer for quick text edits
+Plug 'mtth/scratch.vim'
+
 call plug#end()
 
 " Onedark.vim theme setup
@@ -200,3 +203,9 @@ let g:tex_flavor='latex'
 let g:latex_view_general_viewer = 'zathura'
 let g:vimtex_view_method='zathura'
 let g:vimtex_quickfix_mode=0
+
+" sctach.vim setup
+" ================
+let g:scratch_autohide = &hidden
+let g:scratch_insert_autohide = 1
+

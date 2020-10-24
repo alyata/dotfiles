@@ -260,3 +260,6 @@ for_window [class="(?i)*nextcloud*"] floating disable
 
 # switch focus with keyboard only
 focus_follows_mouse no
+
+# Make zoom floating
+for_window [class="zoom"] floating enable
