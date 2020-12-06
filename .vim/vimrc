@@ -60,6 +60,11 @@ Plug 'mtth/scratch.vim'
 " Coq IDE plugin
 Plug 'whonore/Coqtail'
 
+" Haskell syntax highlighting and indent
+Plug 'neovimhaskell/haskell-vim'
+
+" GHCId integration
+Plug 'aiya000/vim-ghcid-quickfix'
 call plug#end()
 
 " Theme setup
@@ -88,14 +93,6 @@ set shortmess+=I
 
 " Show line numbers.
 set number
-
-" This enables relative line numbering mode. With both number and
-" relativenumber enabled, the current line shows the true line number, while
-" all other lines (above and below) are numbered relative to the current line.
-" This is useful because you can tell, at a glance, what count is needed to
-" jump up or down to a particular line, by {count}k to go up or {count}j to go
-" down.
-set relativenumber
 
 " Set maximum line width to 100. Characters after 100 are wrapped.
 set textwidth=80
@@ -215,3 +212,11 @@ let g:vimtex_quickfix_mode=0
 let g:scratch_autohide = &hidden
 let g:scratch_insert_autohide = 1
 
+" haskell-vim setup
+" =================
+syntax on
+filetype plugin indent on
+
+" nerdcommenter setup
+" ===================
+let g:NERDAltDelims_c = 1
