@@ -65,6 +65,10 @@ Plug 'neovimhaskell/haskell-vim'
 
 " GHCId integration
 Plug 'aiya000/vim-ghcid-quickfix'
+
+" Clingo ASP support
+Plug 'rkaminsk/vim-syntax-clingo'
+
 call plug#end()
 
 " Theme setup
@@ -94,8 +98,9 @@ set shortmess+=I
 " Show line numbers.
 set number
 
-" Set maximum line width to 100. Characters after 100 are wrapped.
+" Set maximum line width to 80. Characters after 80 are wrapped.
 set textwidth=80
+set wrap linebreak nolist
 
 " Highlight the line limit
 set cc=81

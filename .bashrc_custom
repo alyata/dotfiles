@@ -39,3 +39,5 @@ declare -a TRUELINE_SEGMENTS=(
 )
 
 source ~/.trueline
+
+PATH=$PATH:~/.emacs.d/bin
