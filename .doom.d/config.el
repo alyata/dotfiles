@@ -21,6 +21,30 @@
 ;; font string. You generally only need these two:
 ;; (setq doom-font (font-spec :family "monospace" :size 12 :weight 'semi-light)
 ;;       doom-variable-pitch-font (font-spec :family "sans" :size 13))
+(setq doom-font (font-spec :family "FiraCode Nerd Font Mono" :size 16 :weight 'medium)
+      doom-variable-pitch-font (font-spec :family "FiraCode Nerd Font" :size 16))
+
+(use-package haskell-mode)
+
+(use-package fira-code-mode
+  ;; ligatures you don't want
+  :custom (fira-code-mode-disabled-ligatures '("[]" "x"))
+  ;; mode to enable fira-code-mode in
+  :hook haskell-mode)
+
+;; Trigger completion on Shift-Space in lean-company
+(use-package company-lean)
+
+(global-set-key (kbd "S-SPC") #'company-complete)
+
+;; synchronize $PATH to emacs' exec-path
+(use-package exec-path-from-shell)
+
+(when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))
+
+(when (daemonp)
+  (exec-path-from-shell-initialize))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
@@ -52,3 +76,6 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+
+(add-hook 'after-change-major-mode-hook 'display-fill-column-indicator-mode)
+(setq display-fill-column-indicator-column t)

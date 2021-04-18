@@ -103,7 +103,7 @@ set textwidth=80
 set wrap linebreak nolist
 
 " Highlight the line limit
-set cc=81
+set cc=81,101
 
 " Always show the status line at the bottom, even if you only have one window
 " open.
